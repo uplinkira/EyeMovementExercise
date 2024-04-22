@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags to ensure proper rendering and touch zooming -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the webpage -->
+    <title>Interactive Eye Grid</title>
+    
+    <!-- Link to the external CSS for styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Input field for the user to enter the number of eyes they want to display -->
+    <input type="number" id="eye-count" placeholder="Enter number of eyes" min="1" style="margin: 20px; padding: 10px;">
+    
+    <!-- Button that, when clicked, triggers the creation of the grid based on the input number -->
+    <button id="create-grid-btn" style="padding: 10px 20px;">Create Grid</button>
+    
+    <!-- The container where the grid of eyes will be dynamically inserted -->
+    <div id="grid-container" style="margin-top: 20px;"></div>
+    
+    <!-- Link to the external JavaScript file that contains the logic for creating the grid and adding interactivity -->
+    <script src="eyes.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!-- 
+    可以给出一个输入框让用户输入眼睛数量吗？并且使网格布局实时响应自动合理排布填满整个页面
+    fix：只要点击div的任意一处都可以改变眼球颜色，而不需要必须点击到眼球上
+
+-->
+
+

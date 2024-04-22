@@ -1,0 +1,85 @@
+/* Reset the default margin and padding for all elements to ensure consistency across different browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+/* Style the body of the document */
+body {
+    display: flex; /* Use flexbox layout for the body to center the content vertically and horizontally */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    justify-content: center; /* Center elements vertically */
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+    background-color: #f0f0f0; /* Light grey background color for contrast with the eye elements */
+    font-family: Arial, sans-serif; /* Set a default font for any text */
+}
+
+/* Style the input field where users enter the number of eyes */
+#eye-count {
+    margin-bottom: 20px; /* Add some space below the input field */
+    padding: 10px; /* Add some padding inside the input field for better readability */
+    border: 1px solid #ccc; /* Add a light grey border */
+    border-radius: 5px; /* Slightly round the corners of the input field */
+}
+
+/* Style the button used to create the grid */
+#create-grid-btn {
+    padding: 10px 20px; /* Add horizontal and vertical padding */
+    border: none; /* Remove the default border */
+    background-color: #007bff; /* Set a blue background color */
+    color: white; /* Set the text color to white for contrast */
+    border-radius: 5px; /* Slightly round the corners of the button */
+    cursor: pointer; /* Change the cursor to a pointer when hovering over the button */
+    transition: background-color 0.3s; /* Smoothly transition the background color when interacting with the button */
+}
+
+/* Change the button's background color on hover for a visual feedback */
+#create-grid-btn:hover {
+    background-color: #0056b3; /* Darken the button's background color on hover */
+}
+
+/* Style the container that holds the grid of eyes */
+#grid-container {
+    display: flex; /* Use flexbox layout to easily manage the grid items */
+    flex-wrap: wrap; /* Allow the grid items to wrap to the next line if there's not enough space */
+    max-width: 80vw; /* Limit the grid container's width to 80% of the viewport width for some padding */
+    margin-top: 20px; /* Add some space above the grid container */
+    gap: 10px; /* Add some space between the grid items */
+}
+
+/* Style each eye container */
+.eye-container {
+    flex: 1 0 100px; /* Allow each eye container to grow and set a base width of 100px */
+    position: relative; /* Set the position to relative to position the eye and ball absolutely within it */
+    width: 100px; /* Set a fixed width for each eye container */
+    height: 100px; /* Set a fixed height for each eye container */
+    background-color: #fff; /* Set the background color to white for the eye */
+    border-radius: 50%; /* Make the eye container circular */
+    display: flex; /* Use flexbox layout to center the eye inside the container */
+    justify-content: center; /* Center the eye horizontally */
+    align-items: center; /* Center the eye vertically */
+    cursor: pointer; /* Change the cursor to a pointer to indicate the eye container is interactive */
+}
+
+/* Style the eye */
+.eye {
+    width: 60px; /* Set the eye's width */
+    height: 60px; /* Set the eye's height */
+    background-color: #fff; /* Set the eye's background color to white */
+    border-radius: 50%; /* Make the eye circular */
+    position: relative; /* Use relative positioning to position the ball absolutely within the eye */
+}
+
+/* Style the ball (pupil) of the eye */
+.ball {
+    width: 20px; /* Set the ball's width */
+    height: 20px; /* Set the ball's height */
+    background-color: #000; /* Set the ball's background color to black for contrast */
+    border-radius: 50%; /* Make the ball circular */
+    position: absolute; /* Absolutely position the ball within the eye */
+    top: 50%; /* Center the ball vertically within the eye */
+    left: 50%; /* Center the ball horizontally within the eye */
+    transform: translate(-50%, -50%); /* Offset the ball by half its size to truly center it within the eye */
+}
